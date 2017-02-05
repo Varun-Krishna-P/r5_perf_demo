@@ -31,15 +31,27 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'devise'
 gem 'foundation-rails'
+gem 'will_paginate-foundation'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+#  gem 'byebug', platform: :mri
+#    gem 'byebug', '~> 8.0'
+gem 'byebug'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
+  gem 'rack-mini-profiler'
+  gem 'memory_profiler'
+  # For call-stack profiling flamegraphs (requires Ruby MRI 2.0.0+)
+  gem 'flamegraph'
+#  gem 'stackprof'     # For Ruby MRI 2.1+
+  gem 'fast_stack'    # For Ruby MRI 2.0
+  gem 'populator'
+  gem 'faker'
+    
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

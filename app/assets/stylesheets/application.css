@@ -15,3 +15,22 @@
  *= require foundation_and_overrides
  *= require foundation
  */
+div.error-container{
+    background-color: #ffcccc;
+}
+
+div.error-header{
+    background-color: #990000;
+}
+div.error-header h4 {
+    color: #fff;
+    font-weight: 900;
+    padding: 2%;
+}
+
+div.error-container ul{
+    padding: 1%;
+}
+.row{
+    padding-top: 1%;
+}

@@ -12,9 +12,25 @@
   </head>
 
   <body>
-      <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
+      <% if notice %>
+      <div class="success callout" data-closable="slide-out-right">
+          <h5>Success.</h5>
+          <%= notice %>
+          <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <% end %>
+      
+      <% if alert %>
+        <div class="alert callout" data-closable>
+          <h5>Error!</h5>
+          <code><%= alert %></code>
+          <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <% end %>
     <%= yield %>
 
   </body>

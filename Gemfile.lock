@@ -45,6 +45,7 @@ GEM
       execjs (~> 2.0)
     bcrypt (3.1.11-x64-mingw32)
     builder (3.2.3)
+    byebug (9.0.6)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -62,6 +63,10 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.6.5)
+      i18n (~> 0.5)
+    fast_stack (0.2.0)
+    flamegraph (0.9.5)
     foundation-rails (6.3.0.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
@@ -80,6 +85,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    memory_profiler (0.9.7)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -92,8 +98,11 @@ GEM
     nokogiri (1.7.0.1-x64-mingw32)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    populator (1.0.0)
     puma (3.7.0)
     rack (2.0.1)
+    rack-mini-profiler (0.10.1)
+      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.1)
@@ -162,6 +171,9 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    will_paginate (3.1.5)
+    will_paginate-foundation (6.2.0)
+      will_paginate (>= 3.0.3)
 
 PLATFORMS
   x64-mingw32
@@ -170,17 +182,24 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  faker
+  fast_stack
+  flamegraph
   foundation-rails
   jbuilder (~> 2.5)
   jquery-rails
+  memory_profiler
   mysql2 (>= 0.3.18, < 0.5)
+  populator
   puma (~> 3.0)
+  rack-mini-profiler
   rails (~> 5.0.0)
   sass-rails (~> 5.0)
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console
+  will_paginate-foundation
 
 BUNDLED WITH
    1.12.5
