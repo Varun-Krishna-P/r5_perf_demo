@@ -34,3 +34,7 @@ div.error-container ul{
 .row{
     padding-top: 1%;
 }
+
+div.field_with_errors label{
+    color: #990000;
+}

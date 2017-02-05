@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="large-9 columns">
+        <table class="hover">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Text</th>
+            </tr>
+            <% @posts.each do |post| %>
+                <tr>
+                    <td><%= post.id %></td>
+                    <td><%= post.name %></td>
+                    <td><%= post.text %></td>
+                </tr>
+            <% end %>
+        </table>
+        <%= will_paginate @posts, renderer: FoundationPagination::Rails %>
+    </div>
+</div>
+
+
+
