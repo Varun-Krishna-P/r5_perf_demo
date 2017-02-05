@@ -15,7 +15,31 @@ module ApplicationHelper
                     end) # end of content tag ul
                 end # end of content tag div error container
             end # div.large-9
-        end # div.row 
-        
+        end # div.row         
+    end
+    
+    def breadcrumbs(**options)
+#        byebug
+        content_tag(:div, class: 'expanded row bg-grey') do
+            content_tag(:div, class: 'large-12 columns') do
+                content_tag(:nav, aria:{label: "You are here: "}, role:"navigation") do
+                    content_tag(:ul, class: 'breadcrumbs') do
+                        concat(content_tag(:li) do
+                           concat(content_tag(:a, options[:home_path], href: "#"))
+                        end)
+                        
+                        concat(content_tag(:li) do
+                            content_tag(:a, options[:controller_path], href: "#")
+                        end) if options.has_key? :controller_path
+
+                        
+                        concat(content_tag(:li, class: "disabled") do
+                            options[:action_path]
+                        end) if options.has_key? :action_path
+                    end
+
+                end # end or nav
+            end # end of large-12
+        end # end of row
     end
 end

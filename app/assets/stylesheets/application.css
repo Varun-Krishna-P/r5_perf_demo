@@ -16,7 +16,7 @@
  *= require foundation
  */
 div.error-container{
-    background-color: #ffcccc;
+    background-color:  #ffcccc;
 }
 
 div.error-header{
@@ -30,11 +30,20 @@ div.error-header h4 {
 
 div.error-container ul{
     padding: 1%;
+    list-style-type: square;
 }
 .row{
     padding-top: 1%;
 }
 
 div.field_with_errors label{
-    color: #990000;
+    color: #990000;    
+}
+
+div.field_with_errors input{
+    border: 1px solid #990000;
+    background-color: #FFF2F2;
+}
+.bg-grey{
+    background: #F2F2F2;
 }

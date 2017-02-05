@@ -1,3 +1,4 @@
+<%= breadcrumbs({home_path: 'home', controller_path: 'Posts', action_path: 'new'}) %>
 <%= display_error_messages @post if @post.errors.present? %>
 <%= render 'form' %>
 
